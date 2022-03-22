@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- CSS only -->
+    <title>Document</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body id="body">
+    <div class="text-center">
+        <h3>The Game of Pig</h3>
+
+        <select name="users" id="users" onchange="loadGame(this.value)">
+            <option value="" selected disabled> Select Users To Play </option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+        </select>
+        <div class="row" id="usersDiv">
+            <!-- <div class="col-6">
+                <div id="user1">
+                    <h4>User 1</h4>
+                    <h5>Holded Score</h5>
+                    <span id="score1">0</span>
+                </div>
+            </div>
+
+            <div class="col-6">
+                <div id="user2_part">
+                    <h4>User 2</h4>
+                    <h5>Holded Score</h5>
+                    <span id="score2">0</span>
+                </div>
+            </div> -->
+        </div>
+    </div>
+    <hr>
+
+    <div class="text-center row">
+        <h5>Total</h5>
+        <h5><span id="totalRole">0</span></h5>
+        <div class="col-4  align-self-center">
+            <button type="button" class="btn btn-success" onclick="holdScore()">Hold</button>
+        </div>
+        <div class="col-4">
+            <h5>Role Dice </h5>
+            <h5><span id="diceVal">0</span></h5>
+            <button type="button" class="btn btn-light" onclick="roleDice()">Role</button></div>
+        <div class="col-4  align-self-center">
+            <button type="button" class="btn btn-danger" onclick="loadGame()">Reset</button>
+        </div>
+    </div>
+</body>
+<script>
+    (function() {
+        loadGame();
+    }())
+</script>
+
+</html>
